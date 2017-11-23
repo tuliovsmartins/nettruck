@@ -1,0 +1,164 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 06/11/2017 15:14
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+[class^="flat20"]:before, [class*=" flat20"]:before,
+[class^="flat20"]:after, [class*=" flat20"]:after {   
+
+font-family: Flaticon;
+font-size: 25px;
+font-style: normal;
+margin: -5px 10px 10px 10px;
+display: block;
+color: #2F5074
+}
+
+[class^="flat20-left-space"]:before, [class*=" flat20-left-space"]:before,
+[class^="flat20-left-space"]:after, [class*=" flat20-left-space"]:after {   
+font-family: Flaticon;
+font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+color: #2F5074
+}
+
+[class^="flat40"]:before, [class*=" flat40"]:before,
+[class^="flat40"]:after, [class*=" flat40"]:after {   
+font-family: Flaticon;
+font-size: 40px;
+font-style: normal;
+margin-left: 10px;
+color: #2F5074
+}
+
+[class^="flat40-left-space"]:before, [class*=" flat40-left-space"]:before,
+[class^="flat40-left-space"]:after, [class*=" flat40-left-space"]:after {   
+font-family: Flaticon;
+font-size: 40px;
+font-style: normal;
+margin-left: 20px;
+color: #2F5074
+}
+
+[class^="flat50"]:before, [class*=" flat50"]:before,
+[class^="flat50"]:after, [class*=" flat50"]:after {   
+font-family: Flaticon;
+font-size: 50px;
+font-style: normal;
+margin-left: 10px;
+color: #2F5074
+}
+
+[class^="flat50-left-space"]:before, [class*=" flat50-left-space"]:before,
+[class^="flat50-left-space"]:after, [class*=" flat50-left-space"]:after {   
+font-family: Flaticon;
+font-size: 50px;
+font-style: normal;
+margin-left: 20px;
+color: #2F5074
+}
+
+[class^="flat70-center"]:before, [class*=" flat70-center"]:before,
+[class^="flat70-center"]:after, [class*=" flat70-center"]:after {   
+	
+font-family: Flaticon;
+font-size: 70px;
+font-style: normal;
+margin: 50px 50px 50px 50px;
+color: #2F5074
+}
+
+.flaticon-pie-chart:before { content: "\f100"; }
+.flaticon-bar-chart:before { content: "\f101"; }
+.flaticon-bars:before { content: "\f102"; }
+.flaticon-user-account-box:before { content: "\f103"; }
+.flaticon-sell-product:before { content: "\f104"; }
+.flaticon-close-envelope:before { content: "\f105"; }
+.flaticon-screwdriver-and-wrench:before { content: "\f106"; }
+.flaticon-transport-28:before { content: "\f107"; }
+.flaticon-driving-test:before { content: "\f108"; }
+.flaticon-transport-27:before { content: "\f109"; }
+.flaticon-automobile-with-wrench:before { content: "\f10a"; }
+.flaticon-transport-26:before { content: "\f10b"; }
+.flaticon-transport-25:before { content: "\f10c"; }
+.flaticon-transport-24:before { content: "\f10d"; }
+.flaticon-transport-23:before { content: "\f10e"; }
+.flaticon-transport-22:before { content: "\f10f"; }
+.flaticon-people:before { content: "\f110"; }
+.flaticon-transport-21:before { content: "\f111"; }
+.flaticon-chauffer:before { content: "\f112"; }
+.flaticon-transport-20:before { content: "\f113"; }
+.flaticon-car-wheel:before { content: "\f114"; }
+.flaticon-transport-19:before { content: "\f115"; }
+.flaticon-transport-18:before { content: "\f116"; }
+.flaticon-transport-17:before { content: "\f117"; }
+.flaticon-school-bus-front:before { content: "\f118"; }
+.flaticon-clock:before { content: "\f119"; }
+.flaticon-vehicle-steering-wheel:before { content: "\f11a"; }
+.flaticon-repair-mechanism:before { content: "\f11b"; }
+.flaticon-black:before { content: "\f11c"; }
+.flaticon-transport-16:before { content: "\f11d"; }
+.flaticon-international-logistics-delivery-truck-symbol-with-world-grid-behind:before { content: "\f11e"; }
+.flaticon-frontal-truck:before { content: "\f11f"; }
+.flaticon-delivery-package:before { content: "\f120"; }
+.flaticon-material:before { content: "\f121"; }
+.flaticon-transport-15:before { content: "\f122"; }
+.flaticon-transport-14:before { content: "\f123"; }
+.flaticon-transport-13:before { content: "\f124"; }
+.flaticon-transport:before { content: "\f125"; }
+.flaticon-transport-11:before { content: "\f126"; }
+.flaticon-tractor-2:before { content: "\f127"; }
+.flaticon-transport-10:before { content: "\f128"; }
+.flaticon-transport-9:before { content: "\f129"; }
+.flaticon-transport-8:before { content: "\f12a"; }
+.flaticon-tractor-1:before { content: "\f12b"; }
+.flaticon-transport-7:before { content: "\f12c"; }
+.flaticon-planter:before { content: "\f12d"; }
+.flaticon-wrench:before { content: "\f12e"; }
+.flaticon-meeting:before { content: "\f12f"; }
+.flaticon-moving-truck:before { content: "\f130"; }
+.flaticon-truck-1:before { content: "\f131"; }
+.flaticon-concrete-mixer:before { content: "\f132"; }
+.flaticon-seller:before { content: "\f133"; }
+.flaticon-tractor:before { content: "\f134"; }
+.flaticon-transport-5:before { content: "\f135"; }
+.flaticon-settings:before { content: "\f136"; }
+.flaticon-cogwheel-1:before { content: "\f137"; }
+.flaticon-cogwheel:before { content: "\f138"; }
+.flaticon-driver-1:before { content: "\f139"; }
+.flaticon-transport-4:before { content: "\f13a"; }
+.flaticon-transport-3:before { content: "\f13b"; }
+.flaticon-transport-2:before { content: "\f13c"; }
+.flaticon-transport-1:before { content: "\f13d"; }
+.flaticon-tire:before { content: "\f13e"; }
+.flaticon-driver-license:before { content: "\f13f"; }
+.flaticon-delivery-truck:before { content: "\f140"; }
+.flaticon-truck:before { content: "\f141"; }
+.flaticon-transport-12:before { content: "\f142"; }

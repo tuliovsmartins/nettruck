@@ -1,0 +1,14 @@
+<th:block th:fragment="breadcrumbs">
+<div id="breadcrumbs">
+	<div itemprop="breadcrumb">
+			Você está em:
+		 	<th:block th:each="item, itemStat : ${breadcrumbs}">
+					<th:block th:unless="${itemStat.last}">
+						 <a href="#" th:href="@{${item.link}}" th:text="${item.linktext}"></a>
+					</th:block>
+						<span th:text="${itemStat.last} ? '» ' + ${item.linktext}"></span>
+			 		
+	 		</th:block>
+	     </div>
+	</div>
+</th:block>

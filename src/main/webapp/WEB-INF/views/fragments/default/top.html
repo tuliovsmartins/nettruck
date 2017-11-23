@@ -1,0 +1,33 @@
+<th:block th:fragment="top">
+<div id="top">
+ <div id="area-cliente">
+     <div class="container">
+         <ul id="">
+                 <li><a href="#" rel="nofollow">Olá, <span sec:authentication="name">Visitante.</span></a></li>
+                 <li><a href="/login" rel="nofollow">Minha conta | Cadastre-se</a></li>
+          </ul>
+     </div>
+ </div>
+ <div id="area-top">
+     <div class="container">
+        <a href="home.html" id="logo"></a>
+          <span id="bg-aviao"></span>
+     </div>
+ </div>
+ <div class="container">
+     	<ul id="lang">
+             <li><a href="home.html" id="pt" title="Português"></a></li>
+             <li><a href="home.html" id="en" title="English"></a></li>
+         </ul>
+         <ul id="menu">
+             <li class="small "><a href="aeronaves.html" title="Classificados" class="max-medium">Comprar</a></li>
+             <li class=""><a href="anuncie.html" title="Vender" class="small">Vender</a></li>
+             <li class=""><a href="solucoes-financeiras.html" title="Peças" class="">Peças</a></li>
+             <li class=""><a class="min-small" href="" title="Soluções financeiras">Soluções financeiras</a></li>
+             <li class=""><a href="busca-vendedores.html" class="min-small" title="Vendedores">Vendedores</a></li>
+             <li class=""><a href="noticias.html" title="Notícias" class="min-small">Notícias</a></li>
+             <li class="last "><a href="fale-conosco.html" title="Fale Conosco" class="medium" rel="nofollow">Fale Conosco</a></li>
+         </ul>
+     </div>
+ </div>
+ </th:block>

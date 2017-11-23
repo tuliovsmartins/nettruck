@@ -1,0 +1,27 @@
+<th:block th:fragment="register">
+	<div class="steps steps2">
+		<h1 class="titulo-form">Não é cadastrado? Cadastre-se:</h1>
+		<form enctype="application/x-www-form-urlencoded" th:action="@{/user/createUser}" method="post" th:object="${userDataVM}">
+			<div class="errors" th:text="${message}" th:if="${not #strings.isEmpty(message)}">
+			</div>
+			<dl class="zend_form">
+				<dt id="nome-label">
+					<label for="nome" class="required">Nome Completo:</label>
+				</dt>
+				<dd id="nome-element">
+					<input type="text" name="name" id="name" value="" class="validate[required]" />
+				</dd>
+				<dt id="mail-label">
+					<label for="mail" class="required">E-mail:</label>
+				</dt>
+				<dd id="mail-element">
+					<input type="text" name="email" id="email" value="" class="validate[required,funcCall[verificaEmail],custom[email]]" maxlength="40" />
+				</dd>
+				<dt id="Cadastrar-label">&#160;</dt>
+				<dd id="Cadastrar-element">
+					<input type="submit" name="Cadastrar" id="Cadastrar" value="Cadastrar" class="submit" />
+				</dd>
+			</dl>
+		</form>    
+	</div>
+</th:block>

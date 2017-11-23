@@ -1,0 +1,93 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" th:lang="${#locale.language}" dir="ltr">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Content-Language" content="pt-br"/>
+    
+    <title>Nome do site | Descrição curta do site</title>    
+    
+    <meta name="keywords" content="aeronaves a venda, aviões a venda, jatos a venda, helicópteros a venda, aviação executiva, aviões usados, helicópteros usados, compra e venda de aeronaves, cessna, 182 skylane, 172 skyhawk, 206 stationair, 210 centurion, beechcraft, king air, bonanza, baron, beech, g36, g58, venda de aviões, classificados de aeronaves, cirrus sr22, sr20, eurocopter, agusta, helibrás, bell, piper, seneca, corisco, jatos executivos, avião monomotor, bimotor, aviônicos, peças de avião, turboélice, cessna caravan, phenom, embraer, hawker, pilatus, robinson, r44" />
+	<meta name="description" content="Aviões e helicópteros à venda no FlightMarket, o melhor site de classificados de aviação executiva do Brasil. Compra e venda de aeronaves, peças e serviços." />
+	<meta property="og:image" content="/images/logo.png" />
+    
+    <script type="text/javascript" th:src="@{/js/jquery-1.8.3-min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-ui-1.10.3.custom.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.validationEngine2.6.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.validationEngine-pt_BR.js}"></script>
+
+
+	<script>
+	//<![CDATA[
+	    var IDIOMA = 'pt';
+	    var SCREEN_WIDTH = window.screen.width;
+	    if (document.documentElement && document.documentElement.clientHeight)
+	    {
+	        SCREEN_WIDTH = document.documentElement.clientWidth;
+	    }
+	    else if (document.body)
+	    {
+	        SCREEN_WIDTH = document.body.clientWidth;
+	    }
+	    var MIN_WIDTH = 1196;
+	  //]]>
+	</script>
+	<script type="text/javascript" th:src="@{/js/jquery.scrollTo-min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.maskMoney.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.maskedinput.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/fancybox.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.placeholder.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.form.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.Jcrop.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.zoom-min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/base.js}"></script>
+	<script type="text/javascript" th:src="@{/js/Mpy.Formularios.js}"></script>
+	<script type="text/javascript" th:src="@{/js/Mpy.Commom.js}"></script>
+	<script type="text/javascript" th:src="@{/js/Path.js}"></script>
+	<script type="text/javascript" th:src="@{/js/Modelos.js}"></script>
+	<script type="text/javascript" th:src="@{/js/Familia.js}"></script>
+	<script type="text/javascript" th:src="@{/js/Mpy.Cropper.js}"></script>
+    <script type="text/javascript" th:src="@{/js/postcodefind.js}"></script>
+	<link th:href="@{/css/font-awesome-4.7.0/css/font-awesome.css}" media="screen,print" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/fonte.css}" media="screen" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/flick/jquery-ui-1.10.3.custom.min.css}" media="screen" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/validationEngine.jquery.css}" media="screen" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/jquery.Jcrop.min.css}" media="screen" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/fancybox.css}" media="screen" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/base6654.css?v1}" media="screen,print" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/base2.css}" media="screen,print" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/flaticon/flaticon.css}" rel="stylesheet" type="text/css"/>
+	
+</head>
+<body>
+    <div id="wrap" class="page-login">
+      
+      <!-- Topo da pagina -->
+      <th:block th:replace="/fragments/default/top :: top"/>
+      <!-- Fim do Topo da pagina -->    
+           
+<div class="content">
+   <div class="container">
+   
+	   	  <!-- breadcrumbs -->
+	      <th:block th:replace="/fragments/default/breadcrumbs :: breadcrumbs"/>
+	      <!-- Fim do breadcrumbs -->
+        
+	    <div class="clear">
+	    </div>
+         
+	  
+		  <!-- register -->
+		  <th:block th:replace="/fragments/complete/complete :: complete"/>
+		  <!-- register -->
+		     
+		<div class="clear"></div>
+	</div>
+</div>
+</div>
+		  <!-- footer -->
+	      <th:block th:replace="/fragments/default/footer :: footer"/>
+	      <!-- footer -->
+	      
+</body>
+</html>

@@ -1,0 +1,29 @@
+<th:block th:fragment="login">
+<div class="steps steps2">
+	<h1 class="titulo-form">Login:</h1>
+		
+	<form id="login" name="login" th:action="@{/login}" method="POST">
+		<dl class="zend_form">
+			<ul class="errors">
+				<li th:text="${param.error} ? #{labels.menu.errormessage}"></li>
+			</ul>
+			<dt id="email-label">
+				<label for="email" class="required">E-mail:</label>
+			</dt>
+			<dd id="email-element">
+				<input type="text" name="username" id="login" class="validate[required,funcCall[verificaEmail],custom[email]]" />
+			</dd>
+			<dt id="senha-label">
+				<label for="senha" class="required">Senha:</label>
+			</dt>
+			<dd id="senha-element">
+				<input type="password" name="password" id="login" class="validate[required]" maxlength="20" />
+			</dd>
+			<dt id="Entrar-label">&#160;</dt>
+			<dd id="Entrar-element">
+				<input type="submit" name="Entrar" id="Entrar" value="Entrar" class="submit" />
+			</dd>
+		</dl>
+	</form>    
+</div>
+</th:block>

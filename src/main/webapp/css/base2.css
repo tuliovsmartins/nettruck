@@ -1,0 +1,249 @@
+ul.errors, ul.errors li { font-size: 9px !important; list-style-type: none !important;
+                          color: #d11 !important; text-transform: none !important; line-height: 11px !important; height: auto !important; border: none !important;}
+#main{position: relative;}
+span.desclabel{    font-size: 12px;
+    color: #999;
+    position: absolute;
+    left: 0;
+    top: 62px; }
+.flashSuccessMessage{ width: auto; padding: 10px; background: url('../images/success-icon.png') no-repeat scroll 10px 5px #CCFFAA;
+                      -webkit-border-radius: 5px;	-moz-border-radius: 5px; border-radius: 5px; border: 1px solid #33BB00; }
+.flashSuccessMessage div, .flashErrorMessage div{ color: #333; margin-left: 30px; }
+.flashErrorMessage{ width: auto; padding: 10px; background: url('../images/error-icon.png') no-repeat scroll 10px 5px #ff9977;
+                    -webkit-border-radius: 5px;	-moz-border-radius: 5px; border-radius: 5px; border: 1px solid #880000; }
+/* REGISTRO */
+.descTelefone{ 
+	font-size: 10px;
+    width: 145px; 
+}
+			   
+/* Cropper: */
+.imagem_fieldset{
+    position: relative;
+    height: 61px;
+    /*width: 230px !important;*/
+    width: 314px !important;
+}
+#preview, #preview2{
+    position: absolute;
+    border: solid 1px #dedede;
+    z-index: -1;
+    top: 36px;
+    font-size: 11px;
+    right: 15px;
+}
+
+#photoimg {
+    filter: alpha(opacity=0);
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    width: 160px;
+    float: right;
+    margin-top: 24px;
+    height: 40px;
+    position: absolute;
+    right: 0px;
+}
+#botao-fake{
+    background: url(../images/bts.png) repeat-x scroll 0 -94px transparent;
+    border: medium none;
+    z-index: -1;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 32px;
+    line-height: 30px;
+    position: absolute;
+    right: 0px;
+    width: 82px;
+    top: 30px;
+}
+
+.galeria_foto_media{ max-width: 519px; max-height: 350px;}
+
+#imageform #botao-fake { top: 41px; }
+#imageform2 { width:235px; height:78px;}
+#imageform2 #preview2 { top: 28px; }
+#imageform2 #botao-fake { top: 37px; }
+#imageform2 span.warningImage { top: 71px; }
+
+#imageform3 { width:235px; height:78px;}
+#imageform3 #preview2 { top: 28px; }
+#imageform3 #botao-fake { top: 37px; }
+#imageform3 span.warningImage { top: 71px; }
+
+.btnsalvar label {display: none;}
+
+#imageform {
+    width: 235px;
+    z-index: 9999;
+}
+
+.jcrop-holder{
+    max-height: 250px;
+    width: auto;
+    max-width: 400px;
+    height: auto; 
+    position: absolute;
+    width: 400px;
+    background-color: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+#previewContainer, #previewContainer2{
+    overflow: hidden;
+}
+
+.previewCropPj {
+    float: left !important;
+}
+
+#previewCrop{
+    max-height: 250px;
+    max-width: 400px;
+    /*display: none;*/
+    text-align: center;
+    /*padding: 6px;*/
+    background-color: #fff;
+    /*border: 1px solid #ccc !important;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);*/
+}
+#previewCrop img{
+    margin: auto;
+    max-width: 390px;
+    max-height: 240px;
+}
+
+.text-center{
+	width: 100%; 
+	float:left; 
+	text-align:center;
+	 padding:16px 0 17px 0
+	
+}
+
+#dialogCrop{
+    z-index: 5;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 640px;
+    display:none;
+    height: auto;
+    min-height: 200px;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc !important;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow:    0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+    box-shadow:         0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+    font-size: 13px;
+    z-index: 999999;
+}
+
+#botaoOkCrop, #botaoCancelarCrop{
+    position: absolute !important;
+    bottom: 15px !important;
+    right: 15px !important;
+    background: url("../images/bts.png") repeat-x scroll 0 -94px transparent !important;
+    border: medium none !important;
+    color: #FFFFFF !important;
+    cursor: pointer !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    width: 82px !important;
+    z-index: 999999;
+}
+
+#botaoCancelarCrop{right: 100px !important;}
+/* Fim cropper */
+
+#sortableAnuncio li img { width: 182px; height: 123px;}
+
+#outros-motivos-txt, input#outros{ visibility: hidden; }
+
+
+/* Tela Login */
+
+#main .steps2 h1.titulo-form{width: 314px; margin-left: 62px;}
+
+
+/* Editar cadastro */
+
+/* anuncio aeronave */
+#direita-m, #esquerda-m, #direita-h, #esquerda-h { display: block; float: left; width: 75px; }
+/*.anunciando3 #previewCrop{width: 480px;}*/
+.anunciando3 img.preview{max-width: 480px;}
+.anunciando3 .jcrop-holder{width: 480px; max-width: 480px;}
+#sortable { list-style-type: none !important; margin: 0 !important; padding: 0 !important; width: 610px !important; top: 10px; position: absolute; border-top: none !important; }
+#sortable li { margin: 5px 0px 15px 33px !important; padding: 0px !important; float: left !important; width: 110px !important; height: 110px !important; font-size: 4em !important; text-align: center !important; }
+/* #sortable>:first-child .photoupload_thumb{border: 2px #fe0 solid;} */
+
+/* EDI��O DE ANUNCIO DE AERONAVE */
+.tabela-dados-aeronave-etapa1{clear:both;}
+.tabela-dados-aeronave-etapa1 td.first-td{ width: 330px; height: 30px;}
+
+/* BUSCA */
+
+#box_tabs #conteudos #aba1 #formBuscaAvancada #assentos { height: 34px; width:205px; border:1px solid #e1e1e1;margin:-2px 0 0 0; }
+
+#sortableAnuncio li {
+
+    border: 1px solid #154d8f;
+    padding: 7px;
+    margin-top: 17px !important;
+    cursor: pointer;
+    position: relative;
+}
+
+#sortableAnuncio li.selected, #sortableAnuncio>:first-child {
+    border-color: #154d8f;
+    border: 1px solid #154d8f;
+    border-top: 13px solid #154d8f;
+    padding: 7px;
+    margin-top: 5px !important;
+    cursor: pointer;
+    position: relative;
+}
+
+#sortableAnuncio li p {
+    position: absolute;
+    left: 3px;
+    top: -13px;
+    font-size: 10px;
+    color: #fff;
+}
+#sortableAnuncio li p {
+    display: none;
+}
+#sortableAnuncio>:first-child>:first-child {
+    display: block;
+}
+
+form#cadastroPf .cep span, form#cadastroPf .pais span, form#cadastroPf .estado span { float: left; }
+
+form#cadastroPf .cep { float: left; width: 82px; }
+form#cadastroPf .cep input { width: 70px; }
+form#cadastroPf .pais { width: 160px }
+form#cadastroPf .pais select { width: 160px; }
+form#cadastroPf .pais .select-fake { width: 148px; }
+form#cadastroPf .estado { width: 150px; margin-right: 18px; float: left; }
+form#cadastroPf .estado select { width: 150px; }
+form#cadastroPf .estado input, form#cadastroPf .estado .select-fake { width: 138px; }
+.page-conta form#cadastroPf .cidade{margin-top:20px;}
+
+#destaques li a img {border-bottom: 3px solid #1e74cc; width: 182px; height: 118px;}
+
+#destaques-list li a img {border-bottom: 3px solid #1e74cc; width: 182px; height: 118px; float: left; }
+
+#botaoCancelarCrop, #botaoOkCrop { opacity: 100 !important; }
