@@ -95,7 +95,7 @@ public class UserController {
 		
 		if(result.hasErrors()){
 			
-			return new ModelAndView("redirect:/confirm/" + userDataVM.getConfirmcode());
+			return new ModelAndView("redirect:/user/confirm/" + userDataVM.getConfirmcode());
 			
 		} 
 		if(userDataVM.getCadtype().equals("juridica")){
