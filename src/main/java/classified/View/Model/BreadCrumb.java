@@ -2,9 +2,7 @@ package classified.View.Model;
 
 public class BreadCrumb {
 	
-	/** link to place in hierarchy. Can be null for last crumb. */
     private String link;
-    /** The text for the link. */
     private String linktext;
 
 
@@ -17,9 +15,6 @@ public class BreadCrumb {
         return link;
     }
 
-    /**
-     * Return the breadcrumb link text, but truncate it if it is longer than 25 characters.
-     */
     public String getLinktext() {
         if (linktext == null || "".equals(linktext)) {
             return "Unknown";

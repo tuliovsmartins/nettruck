@@ -21,7 +21,6 @@ public class User {
 	private String companyName;
 	private String name;
 	private String password;
-	private String position;
 	private String birthdate;
 	private String document;
 	private String cowntry;
@@ -234,13 +233,6 @@ public class User {
 		this.role = role;
 	}
 
-	public String getPosition() {
-		return position;
-	}
-
-	public void setPosition(String position) {
-		this.position = position;
-	}
 
 	public boolean getFirst_login() {
 		return first_login;

@@ -230,7 +230,7 @@ td[class="spechide"]
                               <div class="contentEditable" >
                               <p style='font-size:18px;'>Olá <span th:text="${object.name}"></span>
                                 </p>
-                                <p style='font-size:16px;'>Seja bem vindo ao <span style='color:#FF1493;'>???</span>
+                                <p style='font-size:16px;'>Seja bem vindo ao <span style='color:#FF1493;'>Nettruck</span>
                                 </p>
 								<br/>
 								<p style='font-size:14px;'>E-mail <span th:text="${object.email}"></span><br/>
@@ -252,7 +252,7 @@ td[class="spechide"]
                           <td align='right' valign='top'>
                             <div class="contentEditableContainer contentTextEditable">
                               <div class="contentEditable" >
-                                <a target='_blank' th:href="${'http://localhost:8080/user/confirm/' + object.confirmcode}" class='link2 '>Confirmar cadastro</a>
+                                <a target='_blank' th:href="${'http://localhost:8080/confirm/' + object.confirmcode}" class='link2 '>Confirmar cadastro</a>
                               </div>
                             </div>
                           </td>

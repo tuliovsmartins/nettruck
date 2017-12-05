@@ -14,19 +14,16 @@ public class UserDataVM implements Serializable {
 	 private static final long serialVersionUID = 1L;
 	
 	private long id;
-	@Email(message="O e-mail digitado é inválido.") @NotNull @NotEmpty(message = "O Campo e-mail é obrigatório")
 	private String cadtype;
+	@Email(message="O e-mail digitado é inválido.") @NotNull @NotEmpty(message = "O Campo e-mail é obrigatório")
 	private String email;
 	private String companyName;
 	@NotNull @NotEmpty(message = "O Campo Nome é obrigatório")
 	private String name;
 	@NotNull @NotEmpty(message = "O Campo Senha é obrigatório")
 	private String password;
-	@NotNull @NotEmpty(message = "O Campo Cargo é obrigatório")
-	private String position;
 	@NotNull @NotEmpty(message = "O Campo Data de nascimento é obrigatório")
 	private String birthdate;
-	@CPF(message = "O CPF informado não é valido") @NotNull @NotEmpty(message = "O Campo CPF é obrigatório")
 	private String document;
 	private String cowntry;
 	@Size(min=2, max=2, message="O campo Estado deve conter apenas a sigla") @NotEmpty(message = "O Campo Estado é obrigatório")
@@ -244,13 +241,6 @@ public class UserDataVM implements Serializable {
 		this.role = role;
 	}
 
-	public String getPosition() {
-		return position;
-	}
-
-	public void setPosition(String position) {
-		this.position = position;
-	}
 
 	public boolean getFirst_login() {
 		return first_login;
