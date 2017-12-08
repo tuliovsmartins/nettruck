@@ -7,7 +7,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
-import org.hibernate.validator.constraints.br.CPF;
+
+import classified.Annotation.CpfCnpj;
 
 public class UserDataVM implements Serializable {
 
@@ -24,6 +25,7 @@ public class UserDataVM implements Serializable {
 	private String password;
 	@NotNull @NotEmpty(message = "O Campo Data de nascimento é obrigatório")
 	private String birthdate;
+	@CpfCnpj
 	private String document;
 	private String cowntry;
 	@Size(min=2, max=2, message="O campo Estado deve conter apenas a sigla") @NotEmpty(message = "O Campo Estado é obrigatório")
