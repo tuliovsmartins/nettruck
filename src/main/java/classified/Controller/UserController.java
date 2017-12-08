@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import classified.Util.BreadCrumbs;
-import classified.Util.UserInfo;
+import classified.Util.UserInfo;;
 
 @Controller
 @RequestMapping("/user")
@@ -26,4 +26,5 @@ public class UserController {
 		
 	}
 	
+
 }

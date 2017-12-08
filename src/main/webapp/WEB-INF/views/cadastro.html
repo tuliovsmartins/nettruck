@@ -24,12 +24,17 @@
 			<!-- BUSCA -->
 			<th:block th:replace="/fragments/default/search :: search"/>
 		
-		
+			<div class="row content">
+				<!-- PROPAGANDAS -->
+				<th:block th:replace="/fragments/index/marketing :: marketing"/>
+				
+				<th:block th:replace="/fragments/cadastro/cadastro :: cadastro"/>
+			</div>
+			</div>
+
 			<!-- footer -->
 			<th:block th:replace="/fragments/default/footer :: footer"/>
-		</div>
-	</div>
-
+</div>
 		<!-- JavaScript -->
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>

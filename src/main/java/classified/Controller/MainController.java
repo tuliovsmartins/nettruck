@@ -40,7 +40,7 @@ public class MainController {
 	
 	
 	@RequestMapping("/")
-	public String index(Model model) {
+	public String home(Model model) {
 		BreadCrumbs.set(model, "Home");
 		return "home";
 	}
@@ -58,6 +58,25 @@ public class MainController {
 		return "blank";
 	}
 	
+
+	@RequestMapping(value = "/teste", method = RequestMethod.GET)
+	public String teste(Model model) {
+		
+		return "teste";
+	}
+
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	public String index(Model model) {
+		
+		return "index";
+	}
+	
+	@RequestMapping(value = "/cadastro", method = RequestMethod.GET)
+	public String cadastro(Model model) {
+		
+		return "cadastro";
+	}
+
 	@RequestMapping(value = "/createUser", method = RequestMethod.GET)
 	public ModelAndView createUser(Model model, UserDataVM userDataVM) {
 		
@@ -129,5 +148,6 @@ public class MainController {
 		return mv;
 
 	}
+
 	
 }
