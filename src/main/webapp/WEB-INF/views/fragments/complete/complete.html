@@ -1,6 +1,6 @@
 <th:block th:fragment="complete">
     	<div id="box-form">
-            <form id="formSeguro" th:action="@{/user/complete}" class="formCadastro formToCenter" method="POST">
+            <form id="formSeguro" th:action="@{/complete}" class="formCadastro formToCenter" method="POST">
             	<input type="hidden" name="confirmcode" id="confirmcode" th:value="${userDataVM.confirmcode}"/>
             	<input type="hidden" name="id" id="id" th:value="${userDataVM.id}"/>
                 <h2 class="toLeft">Dados do usuário</h2>
@@ -18,7 +18,7 @@
                 </fieldset>
                  <fieldset class="right">
                     <label for="password">Repita a senha:<em>*</em></label>
-                    <input tabindex="3" type="password" name="password" id="passwordRep" class="validate[equals[password]]"/>
+                    <input tabindex="3" type="password" name="passwordRep" id="passwordRep" class="validate[equals[password]]"/>
                 </fieldset>
                 <fieldset class="containerCnpj right" style="display: none;">
                     <label for="razao_social">Razão Social <em>(*)</em>:</label>

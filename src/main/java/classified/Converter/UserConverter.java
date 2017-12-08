@@ -32,7 +32,6 @@ public class UserConverter {
 		user.setRole(userDataVM.getRole());
 		user.setSignindate(userDataVM.getSignindate());
 		user.setState(userDataVM.getState());
-		user.setPosition(userDataVM.getPosition());
 		user.setFirst_login(userDataVM.getFirst_login());
 		user.setBirthdate(userDataVM.getBirthdate());
 		user.setTelephone(userDataVM.getTelephone());
@@ -69,7 +68,6 @@ public class UserConverter {
 		userDataVM.setRole(user.getRole());
 		userDataVM.setSignindate(user.getSignindate());
 		userDataVM.setState(user.getState());
-		userDataVM.setPosition(user.getPosition());
 		userDataVM.setFirst_login(user.getFirst_login());
 		userDataVM.setBirthdate(user.getBirthdate());
 		userDataVM.setTelephone(user.getTelephone());

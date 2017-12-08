@@ -1,4 +1,4 @@
-<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" th:lang="${#locale.language}" dir="ltr">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" xml:lang="pt-BR" dir="ltr">
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
 
@@ -48,6 +48,7 @@
 	<script type="text/javascript" src="js/Familia.js"></script>
 	<script src="../../code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/Mpy.Cropper.js"></script>
+	<link rel="stylesheet" href="../../code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
 	<link href="css/font-awesome-4.7.0/css/font-awesome.css" media="screen,print" rel="stylesheet" type="text/css" />
 	<link href="css/fonte.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href="css/flick/jquery-ui-1.10.3.custom.min.css" media="screen" rel="stylesheet" type="text/css" />
@@ -60,7 +61,7 @@
 	
 </head>
 <body>
-    <div id="wrap" class="page-login">
+    <div id="wrap" class="page-home">
       
       <!-- Topo da pagina -->
       <th:block th:replace="/fragments/default/top :: top"/>
@@ -68,26 +69,46 @@
            
 <div class="content">
    <div class="container">
-   	  <!-- breadcrumbs -->
+        
+      <!-- Topo da pagina -->
+      <th:block th:replace="/fragments/default/search :: search"/>
+      <!-- Fim do Topo da pagina -->
+      
+      <!-- breadcrumbs -->
       <th:block th:replace="/fragments/default/breadcrumbs :: breadcrumbs"/>
       <!-- Fim do breadcrumbs -->
-        
+         
     <div class="clear">
     </div>
          
+	<div id="sidebar">
+		  
+		  <!-- newsletter -->
+	      <th:block th:replace="/fragments/home/newsletter :: newsletter"/>
+	      <!-- newsletter --> 
+		
+	</div>
     <div id="main">
 		  
-	  <!-- head -->
-	  <th:block th:replace="/fragments/login/head :: head"/>
-	  <!-- head -->
-	  
-	  <!-- login -->
-	  <th:block th:replace="/fragments/login/login :: login"/>
-	  <!-- login -->
-	  
-	  <!-- register -->
-	  <th:block th:replace="/fragments/login/register :: register"/>
-	  <!-- register -->
+		  <!-- category -->
+	      <th:block th:replace="/fragments/home/category :: category"/>
+	      <!-- category -->
+		 
+		  <!-- featured -->
+	      <th:block th:replace="/fragments/home/featured :: featured"/>
+	      <!-- featured -->
+	      
+	      <!-- last -->
+	      <th:block th:replace="/fragments/home/last :: last"/>
+	      <!-- last -->
+	      
+	      <!-- mainplayers -->
+	      <th:block th:replace="/fragments/home/mainplayers :: mainplayers"/>
+	      <!-- mainplayers -->
+   
+    	  <!-- news -->
+	      <th:block th:replace="/fragments/home/news :: news"/>
+	      <!-- news -->
 		     
 	</div>
 	<div class="clear"></div>

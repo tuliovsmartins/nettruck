@@ -1,33 +1,64 @@
 <th:block th:fragment="top">
-<div id="top">
- <div id="area-cliente">
-     <div class="container">
-         <ul id="">
-                 <li><a href="#" rel="nofollow">Olá, <span sec:authentication="name">Visitante.</span></a></li>
-                 <li><a href="/login" rel="nofollow">Minha conta | Cadastre-se</a></li>
-          </ul>
-     </div>
- </div>
- <div id="area-top">
-     <div class="container">
-        <a href="home.html" id="logo"></a>
-          <span id="bg-aviao"></span>
-     </div>
- </div>
- <div class="container">
-     	<ul id="lang">
-             <li><a href="home.html" id="pt" title="Português"></a></li>
-             <li><a href="home.html" id="en" title="English"></a></li>
-         </ul>
-         <ul id="menu">
-             <li class="small "><a href="aeronaves.html" title="Classificados" class="max-medium">Comprar</a></li>
-             <li class=""><a href="anuncie.html" title="Vender" class="small">Vender</a></li>
-             <li class=""><a href="solucoes-financeiras.html" title="Peças" class="">Peças</a></li>
-             <li class=""><a class="min-small" href="" title="Soluções financeiras">Soluções financeiras</a></li>
-             <li class=""><a href="busca-vendedores.html" class="min-small" title="Vendedores">Vendedores</a></li>
-             <li class=""><a href="noticias.html" title="Notícias" class="min-small">Notícias</a></li>
-             <li class="last "><a href="fale-conosco.html" title="Fale Conosco" class="medium" rel="nofollow">Fale Conosco</a></li>
-         </ul>
-     </div>
- </div>
- </th:block>
+
+<div class="logo"><a href="/"><img src="img/nettruck-logo.png" alt="NetTruck" title="NetTruck" /></a></div>
+
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#czsale-navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="czsale-navbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="help.html">Comprar</a></li>
+						<li><a href="help.html">Vender</a></li>
+						<li><a href="help.html">Peças</a></li>
+						<li><a href="help.html">Soluções Financeiras</a></li>
+						<li><a href="help.html">Vendedores</a></li>
+						<li><a href="help.html">Notícias</a></li>
+						<li><a href="contact.html">Fale Conosco</a></li>
+						<li><a href="/cadastro">Cadastro</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
+							<ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+								<li>
+									<div class="row">
+										<div class="col-md-12">
+											<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+												<div class="form-group">
+													<label class="sr-only" for="exampleInputEmail2">Endereço de Email</label>
+													<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Endereço de e-mail" required="required"/>
+												</div>
+												<div class="form-group">
+													<label class="sr-only" for="exampleInputPassword2">Senha</label>
+													<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Senha" required="required"/>
+												</div>
+												<div class="checkbox">
+													<label>
+														<input type="checkbox"/> Esqueci minha senha
+													</label>
+												</div>
+												<div class="form-group">
+													<button type="submit" class="btn btn-success btn-block">Login</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="form-group">
+										<button onclick="location.href='#'" class="btn btn-default btn-block btn-social btn-facebook"><i class="fa fa-facebook"></i> Login com Facebook</button>
+										<button onclick="location.href='#'" class="btn btn-default btn-block btn-social btn-twitter"><i class="fa fa-twitter"></i> Login com Twitter</button>
+										<button onclick="location.href='#'" class="btn btn-default btn-block btn-social btn-google-plus"><i class="fa fa-google-plus"></i> Login com  Google</button>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul> 
+				</div>
+			</nav>
+		</th:block>
