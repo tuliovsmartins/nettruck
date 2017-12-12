@@ -8,35 +8,37 @@
 		<meta name="keywords" content="..."/>
 		<meta name="author" content="..."/>
 		<title>NetTruck - Classificados</title>
-		<link rel="stylesheet" th:href="@{/css/nettruck.css}" type="text/css" />
-		<link rel="stylesheet" th:href="@{/css/base.css}" type="text/css" />
+		<link rel="stylesheet" href="css/nettruck.css" type="text/css" />
+		<link rel="stylesheet" href="css/base.css" type="text/css" />
 		<link rel="stylesheet" th:href="@{/css/flaticon/flaticon.css}" type="text/css"/>
 	</head>
 	<body>
 		<div class="container wrapper">
-			<th:block th:replace="/fragments/default/top :: top"/>
+		<th:block th:replace="/fragments/default/top :: top"/>
+		<div class="row content">
+		
+		<!-- BUSCA -->
+		<th:block th:replace="/fragments/default/search :: search"/>
+		
+		
 			<div class="row content">
-			<!-- BUSCA -->
-			<th:block th:replace="/user/fragments/userinfo :: userinfo"/>
-			
-			<div class="row content">
-			 	 <!-- Topo da menu -->
-    			  <th:block th:replace="/user/fragments/menu :: menu"/>
-      			<!-- Fim do Topo da pagina -->
-      			
-      			 <!-- Topo da menu -->
-    			  <th:block th:replace="/user/fragments/myitens :: myitens"/>
-      			<!-- Fim do Topo da pagina -->
+				<!-- PROPAGANDAS -->
+				<th:block th:replace="/fragments/index/marketing :: marketing"/>
+				<!-- Novos classificados -->
+				<th:block th:replace="/fragments/index/classifieds :: classifieds"/>
+			</div>
 		</div>
-			<!-- footer -->
-			<th:block th:replace="/fragments/default/footer :: footer"/>
+				
+		<!-- featured -->		
+		
 		</div>
-	</div>
+		<!-- footer -->
+		<th:block th:replace="/fragments/default/footer :: footer"/>
 
 		<!-- JavaScript -->
 		<script th:src="@{/js/jquery-1.11.3.min.js}"></script>
 		<script th:src="@{/js/bootstrap.min.js}"></script>
-		<script th:src="@{/js/jquery.slides.min.js}"></script>
-		<script th:src="@{/js/nettruck.js}"></script>
+		<script th:src="@{js/jquery.slides.min.js}"></script>
+		<script th:src="@{js/nettruck.js}"></script>
 	</body>
 </html>

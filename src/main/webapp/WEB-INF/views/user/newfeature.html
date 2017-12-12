@@ -25,7 +25,7 @@
       			<!-- Fim do Topo da pagina -->
       			
       			 <!-- Topo da menu -->
-    			  <th:block th:replace="/user/fragments/myitens :: myitens"/>
+    			  <th:block th:replace="/user/fragments/newfeature :: newfeature"/>
       			<!-- Fim do Topo da pagina -->
 		</div>
 			<!-- footer -->
@@ -39,4 +39,14 @@
 		<script th:src="@{/js/jquery.slides.min.js}"></script>
 		<script th:src="@{/js/nettruck.js}"></script>
 	</body>
+	<script type="text/javascript" src="../js/jquery-1.8.3-min.js"></script>
+	<script type="text/javascript" src="../js/gettypes.js"></script>
+	<script>
+	$(document).ready(function() {
+
+			$('#labelvalor').hide();
+			$('#optionCaminhao').hide();
+		});
+		
+	</script>
 </html>

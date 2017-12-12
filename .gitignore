@@ -1,5 +1,0 @@
-pom.xml
-
-src/main/java/classified/Config/WebSecurityConfig.java
-src\main\java\classified\Config\DatabaseConfig.java
-src\main\resources\application.properties

@@ -16,23 +16,21 @@
 		<div class="container wrapper">
 			<th:block th:replace="/fragments/default/top :: top"/>
 			<div class="row content">
+		
 			<!-- BUSCA -->
-			<th:block th:replace="/user/fragments/userinfo :: userinfo"/>
-			
+			<th:block th:replace="/fragments/default/search :: search"/>
+		
 			<div class="row content">
-			 	 <!-- Topo da menu -->
-    			  <th:block th:replace="/user/fragments/menu :: menu"/>
-      			<!-- Fim do Topo da pagina -->
-      			
-      			 <!-- Topo da menu -->
-    			  <th:block th:replace="/user/fragments/myitens :: myitens"/>
-      			<!-- Fim do Topo da pagina -->
-		</div>
+				<!-- PROPAGANDAS -->
+				<th:block th:replace="/fragments/index/marketing :: marketing"/>
+				
+				<th:block th:replace="/fragments/cadastro/cadastro :: cadastro"/>
+			</div>
+			</div>
+
 			<!-- footer -->
 			<th:block th:replace="/fragments/default/footer :: footer"/>
-		</div>
-	</div>
-
+</div>
 		<!-- JavaScript -->
 		<script th:src="@{/js/jquery-1.11.3.min.js}"></script>
 		<script th:src="@{/js/bootstrap.min.js}"></script>

@@ -47,7 +47,7 @@ public class AnunciosController {
 		List<AcessoriosDataVM> acessorios = caminhoesService.getAcessorios();
 		model.addAttribute("acessorios", acessorios);
 		
-		return "/user/cadAnuncio";
+		return "/user/newfeature";
 		
 	}
 	
