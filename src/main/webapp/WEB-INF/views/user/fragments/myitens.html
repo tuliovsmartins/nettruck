@@ -1,0 +1,152 @@
+	<th:block th:fragment="myitens">
+
+<div class="col-lg-9 content-right">	
+	<div class="well well-sm" style="padding: 0; background-color: #f5f5f5;">
+		<div class="row top-info">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Buscar anuncios - Digite aqui o modelo ou fabricante (por exemplo)"/>
+				<span class="input-group-btn">
+					<button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="well well-sm" style="padding: 0; background-color: #f5f5f5;">
+		<div class="row top-classifieds">			
+					<div class="row classifieds-table">
+						<div class="col-lg-12">
+							
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Produto</th>
+										<th class="text-center">Preço</th>
+										<th class="text-center">Visualizações</th>
+										<th class="text-center">Estatus</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="col-sm-8 col-md-6">
+											<div class="media">
+												<a class="thumbnail pull-left" href="#">
+													<img class="media-object" th:src="@{/img/classificados/1.jpg}" />
+												</a>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">VOLVO FH 440</a></h4>
+													<p><small>Volvo FH 440 6x2 Motor Zxy Vermelho, Odometro 143.000 Km Único dono, completo ...</small></p>
+												</div>
+											</div>
+										</td>
+										<td class="col-sm-1 col-md-1 text-center" style="vertical-align: middle;"><strong>R$ 150.000,00</strong></td>
+										<td class="col-sm-1 col-md-1 text-center" style="vertical-align: middle;">12x</td>
+										<td class="col-sm-1 col-md-1 text-center" style="vertical-align: middle;">
+											<div class="btn-group">
+					                            <button data-toggle="dropdown" class="btn btn-success btn-xs dropdown-toggle">Ativo <span class="caret"></span></button>
+					                            <ul class="dropdown-menu">
+					                                <li><a href="#">Vendido via Net Truck</a></li>
+					                                <li><a href="#">Vendido por outros meios</a></li>
+					                                <li><a href="#">Desisti da venda</a></li>
+					                                <li class="divider"></li>
+					                                <li><a href="#">Outros motivos</a></li>
+					                            </ul>
+					                        </div>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-sm-8 col-md-6">
+											<div class="media">
+												<a class="thumbnail pull-left" href="#">
+													<img class="media-object" th:src="@{/img/classificados/4.jpg}" />
+												</a>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">SCANIA 420</a></h4>
+													<p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla adipiscing tempor ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac ...</small></p>
+												</div>
+											</div>
+										</td>
+										<td class="col-sm-1 col-md-1 text-center" style="vertical-align: middle;"><strong>R$ 75.000,00</strong></td>
+										<td class="col-sm-1 col-md-1 text-center" style="vertical-align: middle;">66x</td>
+										<td class="col-sm-1 col-md-1 text-center" style="vertical-align: middle;">
+											<div class="btn-group">
+					                            <button data-toggle="dropdown" class="btn btn-danger btn-xs dropdown-toggle">Inativo <span class="caret"></span></button>
+					                            <ul class="dropdown-menu">
+					                                <li><a href="#">Reativar</a></li>
+					                                <li><a href="#">Excluir</a></li>
+					                            </ul>
+					                        </div>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-sm-8 col-md-6">
+											<div class="media">
+												<a class="thumbnail pull-left" href="#">
+													<img class="media-object" th:src="@{/img/classificados/SCANIA_420.jpg}" />
+												</a>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Internacional Ax420</a></h4>
+													<p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla adipiscing tempor ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac ...</small></p>
+												</div>
+											</div>
+										</td>
+										<td class="col-sm-1 col-md-1 text-center" style="vertical-align: middle;"><strong>R$ 89.900,00</strong></td>
+										<td class="col-sm-1 col-md-1 text-center" style="vertical-align: middle;">31x</td>
+										<td class="col-sm-1 col-md-1 text-center" style="vertical-align: middle;">
+											<div class="btn-group">
+					                            <button data-toggle="dropdown" class="btn btn-success btn-xs dropdown-toggle">Ativo <span class="caret"></span></button>
+					                            <ul class="dropdown-menu">
+					                                <li><a href="#">Vendido via Net Truck</a></li>
+					                                <li><a href="#">Vendido por outros meios</a></li>
+					                                <li><a href="#">Desisti da venda</a></li>
+					                                <li class="divider"></li>
+					                                <li><a href="#">Outros motivos</a></li>
+					                            </ul>
+					                        </div>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-sm-8 col-md-6">
+											<div class="media">
+												<a class="thumbnail pull-left" href="#">
+													<img class="media-object" th:src="@{/img/classificados/VOLVO_FH_440.jpg}" />
+												</a>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Mercedes Benz 1228</a></h4>
+													<p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla adipiscing tempor ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac ...</small></p>
+												</div>
+											</div>
+										</td>
+										<td class="col-sm-1 col-md-1 text-center" style="vertical-align: middle;"><strong>R$ 120.000,00</strong></td>
+										<td class="col-sm-1 col-md-1 text-center" style="vertical-align: middle;">5x</td>
+										<td class="col-sm-1 col-md-1 text-center" style="vertical-align: middle;">
+											<div class="btn-group">
+					                            <button data-toggle="dropdown" class="btn btn-success btn-xs dropdown-toggle">Ativo <span class="caret"></span></button>
+					                            <ul class="dropdown-menu">
+					                                <li><a href="#">Vendido via Net Truck</a></li>
+					                                <li><a href="#">Vendido por outros meios</a></li>
+					                                <li><a href="#">Desisti da venda</a></li>
+					                                <li class="divider"></li>
+					                                <li><a href="#">Outros motivos</a></li>
+					                            </ul>
+					                        </div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-lg-12" style="text-align: center;">
+							<ul class="pagination">
+								<li class="disabled"><a href="#">«</a></li>
+								<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">»</a></li>
+							</ul>
+						</div>
+					</div> 
+				</div>
+			</div>
+		</div>
+</th:block>

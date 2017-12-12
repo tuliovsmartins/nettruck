@@ -1,6 +1,6 @@
 <th:block th:fragment="top">
 
-<div class="logo"><a href="/"><img src="img/nettruck-logo.png" alt="NetTruck" title="NetTruck" /></a></div>
+<div class="logo"><a href="/"><img th:src="@{/img/logo.png}" alt="NetTruck" title="NetTruck" /></a></div>
 
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="navbar-header">
@@ -21,7 +21,10 @@
 						<li><a href="help.html">Notícias</a></li>
 						<li><a href="contact.html">Fale Conosco</a></li>
 						<li><a href="/cadastro">Cadastro</a></li>
-						<li class="dropdown">
+						<li sec:authorize="isAuthenticated()">
+							<a th:href="@{/logout}" name="sair" id="sair">Sair</a> 
+						</li>
+						<li sec:authorize="isAnonymous()" class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
 							<ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
 								<li>

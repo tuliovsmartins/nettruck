@@ -42,14 +42,14 @@ public class MainController {
 	@RequestMapping("/")
 	public String home(Model model) {
 		BreadCrumbs.set(model, "Home");
-		return "home";
+		return "/index/home";
 	}
 	
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String userLogin(Model model) {
 		BreadCrumbs.set(model, "Login");
-		return "login";
+		return "/index/home";
 	}
 	
 	@RequestMapping(value = "/blank", method = RequestMethod.GET)
@@ -58,23 +58,16 @@ public class MainController {
 		return "blank";
 	}
 	
-
 	@RequestMapping(value = "/teste", method = RequestMethod.GET)
 	public String teste(Model model) {
 		
 		return "teste";
 	}
-
-	@RequestMapping(value = "/index", method = RequestMethod.GET)
-	public String index(Model model) {
-		
-		return "index";
-	}
 	
 	@RequestMapping(value = "/cadastro", method = RequestMethod.GET)
 	public String cadastro(Model model) {
 		
-		return "cadastro";
+		return "/index/cadastro";
 	}
 
 	@RequestMapping(value = "/createUser", method = RequestMethod.GET)
