@@ -106,7 +106,7 @@ public class MainController {
 		userDataVM.setConfirmed(true);
 		userService.createUser(userDataVM);
 		model.addAttribute("userDataVM",userDataVM);
-		return "complete";
+		return "/index/complete";
 
 	}
 	

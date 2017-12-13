@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" xml:lang="pt-BR" dir="ltr">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="description" content="..."/>
+		<meta name="keywords" content="..."/>
+		<meta name="author" content="..."/>
+		<title>NetTruck - Classificados</title>
+		<link rel="stylesheet" th:href="@{/css/nettruck.css}" type="text/css" />
+		<link rel="stylesheet" th:href="@{/css/base.css}" type="text/css" />
+		<link rel="stylesheet" th:href="@{/css/flaticon/flaticon.css}" type="text/css"/>
+	</head>
+	<body>
+		<div class="container wrapper">
+			<th:block th:replace="/fragments/default/top :: top"/>
+			<div class="row content">
+		
+			<!-- BUSCA -->
+			<th:block th:replace="/fragments/default/search :: search"/>
+		
+			<!-- Complete -->
+			<div class="row content">
+				<!-- PROPAGANDAS -->
+				<th:block th:replace="/fragments/index/marketing :: marketing"/>
+			
+				<th:block th:replace="/fragments/complete/complete :: complete"/>
+			</div>
+		</div>
+			<!-- footer -->
+			<th:block th:replace="/fragments/default/footer :: footer"/>
+		
+	</div>
+
+		<!-- JavaScript -->
+		<script th:src="@{/js/jquery-1.11.3.min.js}"></script>
+		<script th:src="@{/js/bootstrap.min.js}"></script>
+		<script th:src="@{js/jquery.slides.min.js}"></script>
+		<script th:src="@{js/nettruck.js}"></script>
+	</body>
+</html>

@@ -12,88 +12,135 @@
                     <input tabindex="1" type="radio" name="cadtype" id="pessoa-juridica" class="validate[required] tipoPessoa" value="juridica"/>
                     <label for="pessoa-juridica">Pessoa Jurídica</label>
                 </fieldset>
+
+                
+                        <div class="col-lg-8">
+                            <div class="well">
+                                    <div class="form-group">
+                                        <div class="row">
+            <div class="col-xs-6 col-md-6">                     
                 <fieldset>
                     <label for="password">Senha:<em>*</em></label>
-                    <input tabindex="2" type="password" name="password" id="password" class="validate[required]"/>
+                    <input tabindex="2" type="password" name="password" id="password" class="form-control"/>
                 </fieldset>
+</div>
+
+<div class="col-xs-6 col-md-6"> 
                  <fieldset class="right">
                     <label for="password">Repita a senha:<em>*</em></label>
-                    <input tabindex="3" type="password" name="passwordRep" id="passwordRep" class="validate[equals[password]]"/>
+                    <input tabindex="3" type="password" name="passwordRep" id="passwordRep" class="form-control"/>
                 </fieldset>
+</div>
+
+    </div>
                 <fieldset class="containerCnpj right" style="display: none;">
                     <label for="razao_social">Razão Social <em>(*)</em>:</label>
-                    <input tabindex="4" type="text" name="companyName" id="inputRazaoSocial" value="" class="validate[required]"/>
+                    <input tabindex="4" type="text" name="companyName" id="inputRazaoSocial" value="" class="form-control"/>
                 </fieldset>
-                <fieldset class="containerCpf right">
-                    <label for="razao_social">Data de nascimento <em>(*)</em>:</label>
-                    <input tabindex="5" type="text" name="birthdate" id="birthdate" value="" class="validate[required]"/>
-                </fieldset>
+                
                 <fieldset class="containerCnpj left" style="display: none;">
                     <label for="nome">Nome fantasia<em>*</em>:</label>
-                    <input tabindex="19" type="text" name="namefantasy" id="namefantasy" th:value="${userDataVM.name}" value="" class="validate[required]"/>
+                    <input tabindex="19" type="text" name="namefantasy" id="namefantasy" th:value="${userDataVM.name}" value="" class="form-control"/>
                 </fieldset>
-                <fieldset class="containerCpf ">
+
+                  <fieldset class="containerCpf ">
                     <label for="nome">Nome Completo<em>*</em>:</label>
-                    <input tabindex="4" type="text" name="name" id="name" th:value="${userDataVM.name}" value="" class="validate[required]"/>
+                    <input tabindex="4" type="text" name="name" id="name" th:value="${userDataVM.name}" value="" class="form-control"/>
                 </fieldset>
-                <fieldset class="containerCpf">
+
+<fieldset class="right">
+                    <label for="email">E-mail<em>*</em>:</label>
+                    <input tabindex="18" type="email" readonly="readonly" name="email" id="email" th:value="${userDataVM.email}" class="form-control"/>
+                </fieldset>
+
+
+                  <fieldset class="containerCpf">
                     <label for="cpf">CPF <em>(* somente números)</em>:</label>
-                    <input tabindex="6" type="text" name="document" id="cpf" value="" class="validate[required,funcCall[verificaCpf]] cpf"/>
+                    <input tabindex="6" type="text" name="document" id="cpf" value="" class="form-control" maxlength="14" onkeypress="formatar('###.###.###-##', this);"/>
                 </fieldset>
+
                 <fieldset class="containerCnpj" style="display: none;">
                     <label for="cnpj">CNPJ <em>(* somente números)</em>:</label>
-                    <input tabindex="6" type="text" name="document" id="cnpj" value="" class="validate[required, funcCall[verificaCnpj]] cnpj"/>
+                    <input tabindex="6" type="text" name="document" id="cnpj" value="" class="form-control"/>
                 </fieldset>
-                <fieldset class="right">
-                    <label for="email">E-mail<em>*</em>:</label>
-                    <input tabindex="18" type="text" readonly="readonly" name="email" id="email" th:value="${userDataVM.email}" class="validate[required],custom[email]"/>
+
+
+                <fieldset class="containerCpf right">
+                    <label for="razao_social">Data de nascimento <em>(*)</em>:</label>
+                    <input tabindex="5" type="text" name="birthdate" id="birthdate" value="" class="form-control"/>
                 </fieldset>
+
+                
+
+<div class="form-group"> 
                 <fieldset>
                     <label for="cep">CEP:</label>
-                    <input tabindex="7" type="text" name="postal" id="postal" onChange="pesquisacep( this.value);" value="" class="cep"/>
+                    <input tabindex="7" type="text" name="postal" id="postal" onChange="pesquisacep( this.value);" value="" class="form-control"/>
                 </fieldset>
-                <fieldset class="right parent-select">
+
+</div>
+                
                 	 <fieldset>
 	                    <label for="estado">Estado<em>*</em>:</label> 
-	                    <input tabindex="8" type="text" name="state" id="state" value="" class="" style="width: 133px;"/>
+	                    <input tabindex="8" type="text" name="state" id="state" value="" class="form-control" style="width: 133px;"/>
                     </fieldset>
+
                     <fieldset>
 	                    <label for="endereco">Rua:</label>
-	                    <input tabindex="9" type="text" name="street" id="street" value="" class="" style="width: 302px;"/>
+	                    <input tabindex="9" type="text" name="street" id="street" value="" class="form-control" />
                 	</fieldset>
-                </fieldset>
+                
                 <fieldset class="left">
                     <label for="cidade">Cidade<em>*</em>:</label> 
-                    <input tabindex="10" type="text" name="city" id="city" value="" class="" />
+                    <input tabindex="10" type="text" name="city" id="city" value="" class="form-control" />
                 </fieldset>
                 <fieldset class="right">
                 	<fieldset>
                         <label for="numero">Número:</label>
-                        <input tabindex="11" type="text" name="number" id="number" value="" class="validate[custom[number]]"/>
+                        <input tabindex="11" type="text" name="number" id="number" value="" class="form-control"/>
                     </fieldset>
                     <fieldset>
 	                    <label for="bairro">Bairro:</label>
-	                    <input tabindex="12" type="text" name="neighborhood" id="neighborhood" value="" class="" style="width: 302px;"/>
+	                    <input tabindex="12" type="text" name="neighborhood" id="neighborhood" value="" class="form-control" style="width: 302px;"/>
 	                </fieldset>
                 </fieldset>
                	<fieldset class="left">
                        <label for="complemento">Complemento:</label>
-                       <input tabindex="13" type="text" name="complement" value=""/>
+                       <input tabindex="13" type="text" name="complement" class="form-control" value=""/>
                 </fieldset>
-                <fieldset class="right">
-                	<fieldset>
+
+    
+                   	<fieldset>
 	                    <label for="phone-residen">Telefone Fixo <em>*</em> :</label>
-	                    <input tabindex="14" type="text" name="telephone" id="homephone" value="" style="width: 220px;"/>
+	                    <input tabindex="14" type="text" name="telephone" id="homephone" value="" class="form-control" style="width: 220px;"/>
                     </fieldset>
-                    <fieldset class="right">
+         
+
+            <fieldset>
 	                    <label for="celular">Celular:</label>
-	                    <input tabindex="15" type="text" name="cellphone" id="cellphone" value="" style="width: 220px;"/>
-                	</fieldset>
-                </fieldset>
+	                    <input tabindex="15" type="text" name="cellphone" class="form-control" id="cellphone" value="" style="width: 220px;"/>
+            </fieldset>
+
+   
                 
-                <fieldset class="full">
-                	<input tabindex="16" type="submit" value="Enviar" class="submit"/>
-                </fieldset>
+
+
+
+
+                <div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            
+
+</div>
+</div>
+</div>
+
+
+
             </form>
-        </div>
+</div>
+
+
+
 </th:block>
