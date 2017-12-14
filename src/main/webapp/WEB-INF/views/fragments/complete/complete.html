@@ -1,4 +1,5 @@
 <th:block th:fragment="complete">
+
     	<div id="box-form">
             <form id="formSeguro" th:action="@{/complete}" class="formCadastro formToCenter" method="POST">
             	<input type="hidden" name="confirmcode" id="confirmcode" th:value="${userDataVM.confirmcode}"/>
@@ -56,18 +57,18 @@
 
                   <fieldset class="containerCpf">
                     <label for="cpf">CPF <em>(* somente números)</em>:</label>
-                    <input tabindex="6" type="text" name="document" id="cpf" value="" class="form-control" maxlength="14" onkeypress="formatar('###.###.###-##', this);"/>
+                    <input tabindex="6" type="text" name="document" id="cpf" value="" class="form-control" maxlength="14" onkeypress="formatar('###.###.###-##', this);" style="width: 220px;"/>
                 </fieldset>
 
                 <fieldset class="containerCnpj" style="display: none;">
                     <label for="cnpj">CNPJ <em>(* somente números)</em>:</label>
-                    <input tabindex="6" type="text" name="document" id="cnpj" value="" class="form-control"/>
+                    <input tabindex="6" type="text" name="document" id="cnpj" value="" class="form-control" style="width: 220px;"/>
                 </fieldset>
 
 
                 <fieldset class="containerCpf right">
                     <label for="razao_social">Data de nascimento <em>(*)</em>:</label>
-                    <input tabindex="5" type="text" name="birthdate" id="birthdate" value="" class="form-control"/>
+                    <input tabindex="5" type="text" name="birthdate" id="birthdate" value="" class="form-control" style="width: 220px;"/>
                 </fieldset>
 
                 
@@ -75,7 +76,7 @@
 <div class="form-group"> 
                 <fieldset>
                     <label for="cep">CEP:</label>
-                    <input tabindex="7" type="text" name="postal" id="postal" onChange="pesquisacep( this.value);" value="" class="form-control"/>
+                    <input tabindex="7" type="text" name="postal" id="postal" onChange="pesquisacep( this.value);" value="" class="form-control" style="width: 220px;"/>
                 </fieldset>
 
 </div>
