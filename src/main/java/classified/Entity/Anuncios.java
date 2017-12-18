@@ -124,7 +124,4 @@ public class Anuncios {
 		this.cadastroData = cadastroData;
 	}
 	
-	
-	
-	
 }

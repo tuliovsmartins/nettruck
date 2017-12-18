@@ -1,6 +1,5 @@
 function gettypes() {
 	var typeselected= $("#tipo option:selected").val();
-    
 	$.ajax({
 		url : "/user/newfeature/"+typeselected,
 		type : "POST",
@@ -64,7 +63,7 @@ function getanos() {
 			$('#anos').empty();
 			$('#anos').append($('<option>', {
 			    value: 0,
-			    text:  'Selecione o ano'
+			    text:  'Ano'
 			}));
 			
 			for (item in response) {
@@ -100,3 +99,18 @@ function getvalor() {
 		}
 	});
 }
+
+function getFormData (area) {
+	var formData = new FormData() || {};
+	$("#" + area).find('input, select, textarea, radio').each(function(){
+		if($(this).attr('type') == 'radio'){
+			var test = $(this).filter(':checked').val();
+			if(test){
+				formData.append( $(this).attr('name'),$(this).filter(':checked').val() );
+			}
+		} else {
+			formData.append( $(this).attr('name'), $(this).val());
+		}
+	});
+		return formData;
+};

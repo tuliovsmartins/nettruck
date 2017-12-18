@@ -154,3 +154,98 @@
 .top-info {
     padding: 10px 20px 10px;
 }
+
+.hr-line-dashed {
+    border-top: 1px dashed #e7eaec;
+    color: #ffffff;
+    background-color: #ffffff;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.drop_zone_thumb {
+    height: 85px;
+    border: 1px solid #15224F;
+    margin: auto;
+  }
+  
+  #drop_zone {
+  position: relative;
+  border: 2px dotted #ccc;
+  color: #333333;
+  font: bold 14px/200px arial;
+  height: 200px;
+  width: 800px;
+  text-align: center;
+  overflow: auto;
+ 
+ }
+ 
+ #drop_zone.hover {
+  border: 2px solid #D9EDF7;
+  color: #77A2CF;
+}
+
+#drop_zone.dropped {
+  background: #F5F5F5;
+  border: 2px dotted #D9EDF7;
+}
+#drop_zone div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+#drop_zone img {
+  max-width: 80%;
+  max-height: 80%;
+  border: 1px solid #000;
+  margin: 10px 5px 0 0;
+  border-radius: 5px;
+}
+
+
+#drop_zone [type="file"] {
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Close Button */
+
+[class*='close-'] {
+  color: #777;
+  font: 14px/100% arial, sans-serif;
+  position: absolute;
+  right: 20px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  top: 67px;
+}
+
+.close-classic:after {
+  content: 'X'; /* ANSI X letter */
+}
+
+.close-thin:after {
+  content: '×'; /* UTF-8 symbol */
+}
+
+.close-thik:after {
+  content: '✖'; /* UTF-8 symbol */
+}
+
+.dialog {
+  float: left;
+  position: relative;
+  
+}

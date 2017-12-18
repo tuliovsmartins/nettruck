@@ -1,5 +1,152 @@
-<th:block th:fragment="myitens">
-
-	teste
-	
+<th:block th:fragment="newfeature">
+<div class="col-lg-9 content-right">
+<form th:action="@{/user/cadAnuncio}" role="form" th:object="${anunciosDataVM}" enctype="multipart/form-data" method="POST">
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<h3 class="panel-title">Incluir anuncio</h3>
+	</div>
+	<div class="panel-body">
+		<div class="form-group">
+			<div class="input-group col-sm-6">
+				<select class="form-control" name="tipoId" id="tipo" onChange="gettypes();">
+				    <option value="0" selected="selected">Selecione um tipo</option>
+					<option value="1" id="caminhao">Caminhão</option>
+					<option value="2" id="reboque">Reboque</option>
+					<option value="3" id="equipamento">Equipamento</option>
+				</select>
+			</div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		<div class="form-group">
+			<div class="form-inline">
+				<div class="form-group">
+					<div class="input-group col-sm-12">
+						<select class="form-control" name="marcaId" id="anunciomarca" onChange="getmodels();">
+							<option th:each="caminhoesMarcaDataVM, index : ${caminhoesMarcaDataVM}" th:text="${caminhoesMarcaDataVM.marca}"></option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group col-sm-12">
+						<select class="form-control" name="modeloId" id="modelos" onChange="getanos();">
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group col-sm-12">
+						<select class="form-control" name="anoId" id="anos" onChange="getvalor();">
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group col-sm-12">
+						<label id="labelvalor">Valor na fipe:</label> <span id="valorfipe"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+			<div class="hr-line-dashed"></div>
+			
+			<div id="optionCaminhao">
+				<div class="form-group">
+					<div class="form-inline">
+						<div class="form-group">
+							<label class="col-sm-1 control-label">Preço:</label>
+							<div class="input-group col-sm-12">
+								<input class="form-control" type="text" name="preco" placeholder="Preço"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label">Carroceria:</label>
+							<div class="input-group col-sm-12">
+								<select class="form-control" name="carroceria" id="carroceria">
+									<option value="" selected="selected">Escolha o tipo de carroceria</option>
+									 <option value="Sem Carroceria">Sem carroceria</option>
+									 <option value="Baú">Baú</option>
+									 <option value="Baú frigorífico">Baú frigorífico</option>
+									 <option value="Sider">Sider</option>
+									 <option value="Caçamba">Caçamba</option>
+									 <option value="Grade baixa">Grade baixa</option>
+									 <option value="Graneleira">Graneleira</option>
+									 <option value="Prancha">Prancha</option>
+									 <option value="Bug Porta Container">Bug Porta Container</option>
+									 <option value="Munck">Munck</option>
+									 <option value="Silo">Silo</option>
+									 <option value="Tanque">Tanque</option>
+									 <option value="Boiadeira">Boiadeira</option>
+									 <option value="Gaiola">Gaiola</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="form-inline">
+						<div class="form-group">
+							<label class="col-sm-1 control-label">Cor:</label>
+							<div class="input-group col-sm-12">
+								<select class="form-control" name="cor" id="Cor">
+									<option value="" selected="selected">Escolha a cor do veículo</option>
+									<option value="Branco">Branco</option>
+									<option value="Preto">Preto</option>
+									<option value="Azul">Azul</option>
+									<option value="Vermelho">Vermelho</option>
+									<option value="Cinza">Cinza</option>
+									<option value="Marrom">Marrom</option>
+									<option value="Branco">Verde</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-1 control-label">KM:</label>
+							<div class="input-group col-sm-12">
+								<input class="form-control" type="text" name="odometro" placeholder="Odometro - Km"/>
+								
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Tração:</label>
+							<div class="input-group col-sm-12">
+								<select class="form-control" name="tracao" id="tracao">
+									<option value="" selected="selected">Escolha a tração</option>
+									 <option value="4x2">4x2</option>
+									 <option value="6x2">6x2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="text">Observações:</label>
+					<div class="input-group col-sm-12">
+						<textarea name="obs" id="text" class="form-control" rows="4"></textarea>
+					</div>
+				</div>
+				<div class="hr-line-dashed"></div>
+						<div class="form-group">
+							<div class="form-inline">
+								<label>Opcionais</label>
+								<div class="input-group col-sm-12">
+									<div class="checkbox" th:if="${acessorios}" th:each="acessorio, index : ${acessorios}">
+							    		<input type="checkbox" name="acessorios" th:value="${acessorio.id}"/> 
+										<label th:text="${acessorio.acessorio}"></label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="text">Fotos:</label>
+							<div id="drop_zone">
+								<div id="drop_zone_text">Arraste as fotos para esta área ou clique aqui para procurar</div>
+								<input type="file" name="file" multiple="multiple"></input>
+							</div>
+						</div>
+				<input type="submit" id="submit" class="btn btn-success" value="Cadastrar"/>
+			</div>
+				
+		</div>
+	</div>
+</form>
+</div>
 </th:block>

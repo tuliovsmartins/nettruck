@@ -8,9 +8,19 @@
 		<meta name="keywords" content="..."/>
 		<meta name="author" content="..."/>
 		<title>NetTruck - Classificados</title>
+		
+		<link rel="stylesheet" th:href="@{/css/bootstrap.css}" type="text/css" />
 		<link rel="stylesheet" th:href="@{/css/nettruck.css}" type="text/css" />
 		<link rel="stylesheet" th:href="@{/css/base.css}" type="text/css" />
 		<link rel="stylesheet" th:href="@{/css/flaticon/flaticon.css}" type="text/css"/>
+		<link rel="stylesheet" th:href="@{/css/dropzone.css}" type="text/css"/>
+		<link rel="stylesheet" th:href="@{/css/dropzone-basics.css}" type="text/css"/>
+		
+		<style>
+ 
+
+</style>
+		
 	</head>
 	<body>
 		<div class="container wrapper">
@@ -23,30 +33,29 @@
 			 	 <!-- Topo da menu -->
     			  <th:block th:replace="/user/fragments/menu :: menu"/>
       			<!-- Fim do Topo da pagina -->
-      			
       			 <!-- Topo da menu -->
     			  <th:block th:replace="/user/fragments/newfeature :: newfeature"/>
       			<!-- Fim do Topo da pagina -->
-		</div>
+			</div>
 			<!-- footer -->
 			<th:block th:replace="/fragments/default/footer :: footer"/>
 		</div>
 	</div>
 
 		<!-- JavaScript -->
-		<script th:src="@{/js/jquery-1.11.3.min.js}"></script>
-		<script th:src="@{/js/bootstrap.min.js}"></script>
-		<script th:src="@{/js/jquery.slides.min.js}"></script>
-		<script th:src="@{/js/nettruck.js}"></script>
-	</body>
-	<script type="text/javascript" src="../js/jquery-1.8.3-min.js"></script>
-	<script type="text/javascript" src="../js/gettypes.js"></script>
+		<script type="text/javascript" th:src="@{/js/jquery-3.1.1.js}"></script>
+		<script type="text/javascript" th:src="@{/js/jquery.slides.min.js}"></script>
+		<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+		<script type="text/javascript" th:src="@{/js/nettruck.js}"></script>
+		<script type="text/javascript" th:src="@{/js/gettypes.js}"></script>
+		<script type="text/javascript" th:src="@{/js/dropzone.js}"></script>
 	<script>
-	$(document).ready(function() {
-
+	 $(document).ready(function () {
+		
 			$('#labelvalor').hide();
 			$('#optionCaminhao').hide();
-		});
-		
+			
+	 });
 	</script>
+</body>
 </html>

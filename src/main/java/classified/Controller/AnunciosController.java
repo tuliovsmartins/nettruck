@@ -11,15 +11,19 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import classified.Service.AnunciosService;
 import classified.Service.CaminhoesService;
+import classified.Service.UploadFileService;
 import classified.Util.BreadCrumbs;
 import classified.Util.UserInfo;
 import classified.View.Model.AcessoriosDataVM;
+import classified.View.Model.AnuncioFotoDataVM;
 import classified.View.Model.AnunciosDataVM;
 import classified.View.Model.CaminhoesAnoDataVM;
 import classified.View.Model.CaminhoesMarcaDataVM;
@@ -38,6 +42,9 @@ public class AnunciosController {
 	
 	@Autowired
 	private AnunciosService anunciosService;
+	
+	@Autowired
+	private UploadFileService uploadFileService;
 	
 	@RequestMapping("/newfeature")
 	public String anuncio(Model model) throws InterruptedException {
@@ -65,10 +72,11 @@ public class AnunciosController {
 	}
 	
 	@RequestMapping(value = "/cadAnuncio", method = RequestMethod.POST)
-	public ModelAndView cadAnuncio(@ModelAttribute AnunciosDataVM anunciosDataVM, BindingResult result, RedirectAttributes atributes 
+	public ModelAndView cadAnuncio(@ModelAttribute AnunciosDataVM anunciosDataVM, BindingResult result, @RequestParam("file") MultipartFile[] file, RedirectAttributes atributes 
 			, Model model) throws InterruptedException {
 		
 		UserDataVM userDataVM = userInfo.getUserInfo(model);
+		AnuncioFotoDataVM anuncioFotoDataVM =  new AnuncioFotoDataVM();
 		
 		if(result.hasErrors()){
 			
@@ -76,13 +84,26 @@ public class AnunciosController {
 			
 		} 
 		
+		
+		
 		anunciosDataVM.setCadastroData(new Date());
 		anunciosDataVM.setUserId(userDataVM.getId());
 		anunciosDataVM.setStatus("Ativo");
-		anunciosService.createAnuncio(anunciosDataVM);
+		anunciosDataVM = anunciosService.createAnuncio(anunciosDataVM);
+		
+		for(MultipartFile uploadedFile : file) {
+			String imageFile = null;
+			String folder = String.valueOf(anunciosDataVM.getId());
+			imageFile = uploadFileService.fileUploadUniqueName("src/main/webapp/img/classificados/", uploadedFile, folder);
+			anuncioFotoDataVM.setAnuncioId(anunciosDataVM.getId());
+			anuncioFotoDataVM.setCadData(new Date());
+			anuncioFotoDataVM.setFoto(imageFile);
+			anuncioFotoDataVM.setPrincipal(false);
+			anunciosService.cadFotos(anuncioFotoDataVM);
+        }
 		atributes.addFlashAttribute("message", "Anúncio " + anunciosDataVM.getPreco() + " cadastrado com sucesso!");
 		ModelAndView mv = new ModelAndView("redirect:/user/newfeature");
-		
+		model.addAttribute("anunciosDataVM", anunciosDataVM);
 		return mv;
 		
 	}
