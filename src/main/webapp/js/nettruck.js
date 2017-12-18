@@ -48,4 +48,16 @@ $( document ).ready(function() {
 		$(this).addClass('active');
 	});
 
+$('input[name=cadtype]').on('change', function(){
+	if ($('input[name=cadtype]:checked', '#formSeguro').val() == "fisica") {
+		$('.containerCnpj').hide();
+		$('.containerCpf').show();
+
+	} else {
+		$('.containerCpf').hide();
+		$('.containerCnpj').show();
+	
+	}
+});
+
 });
