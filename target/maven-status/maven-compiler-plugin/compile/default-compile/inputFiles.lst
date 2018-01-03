@@ -3,8 +3,14 @@ C:\Users\Túlio\workspace\Classified\src\main\java\classified\Interface\Caminhoe
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\View\Model\CaminhoesModeloDataVM.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Annotation\CpfCnpj.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Service\AnunciosService.java
+C:\Users\Túlio\workspace\Classified\src\main\java\classified\Controller\CreditsAutorizationController.java
+C:\Users\Túlio\workspace\Classified\src\main\java\classified\Util\DateTimeUtil.java
+C:\Users\Túlio\workspace\Classified\src\main\java\classified\Service\PlanosService.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Entity\Acessorios.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Entity\CaminhoesMarca.java
+C:\Users\Túlio\workspace\Classified\src\main\java\classified\View\Model\CreditsNotification.java
+C:\Users\Túlio\workspace\Classified\src\main\java\classified\View\Model\UserCreditCardDataVM.java
+C:\Users\Túlio\workspace\Classified\src\main\java\classified\Entity\UserCreditCard.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Entity\Anuncios.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Application.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Converter\CaminhoesMarcaConverter.java
@@ -13,6 +19,7 @@ C:\Users\Túlio\workspace\Classified\src\main\java\classified\Entity\CaminhoesMo
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\View\Model\UserDataVM.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\View\Model\AnuncioFotoDataVM.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Converter\TiposConverter.java
+C:\Users\Túlio\workspace\Classified\src\main\java\classified\Converter\UserCreditCardConverter.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Interface\TiposInterface.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Converter\AcessoriosConverter.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Interface\CaminhoesAnoInterface.java
@@ -22,6 +29,7 @@ C:\Users\Túlio\workspace\Classified\src\main\java\classified\View\Model\Caminho
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Controller\UserController.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Converter\UsuarioContaConverter.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Entity\UsuarioTransacao.java
+C:\Users\Túlio\workspace\Classified\src\main\java\classified\Util\CardTypeUtil.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Service\UploadFileService.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\View\Model\TiposDataVM.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Converter\UserConverter.java
@@ -37,11 +45,14 @@ C:\Users\Túlio\workspace\Classified\src\main\java\classified\View\Model\Usuario
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Service\MailSenderService.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\View\Model\AnunciosDataVM.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Interface\AnuncioFotoInterface.java
+C:\Users\Túlio\workspace\Classified\src\main\java\classified\Util\TransactionStatusUtil.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Entity\CaminhoesAno.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Entity\UsuarioConta.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\View\Model\AcessoriosDataVM.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Interface\UserInterface.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Util\CpfCnpjValidator.java
+C:\Users\Túlio\workspace\Classified\src\main\java\classified\Service\PaymentService.java
+C:\Users\Túlio\workspace\Classified\src\main\java\classified\Util\ValidateCreditCardUtil.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Config\MvcConfiguration.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Config\CustomSuccessHandler.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Config\DatabaseConfig.java
@@ -61,4 +72,5 @@ C:\Users\Túlio\workspace\Classified\src\main\java\classified\View\Model\BreadCr
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Entity\User.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Interface\UsuarioContaInterface.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Util\UserInfo.java
+C:\Users\Túlio\workspace\Classified\src\main\java\classified\Interface\PaymentDao.java
 C:\Users\Túlio\workspace\Classified\src\main\java\classified\Config\WebSecurityConfig.java

@@ -1,0 +1,3 @@
+
+/* Instalação da biblioteca pagseguro */
+mvn install:install-file -Dfile=pagseguro-api-2.5.2.jar -DgroupId=br.com.uol.pagseguro -DartifactId=pagseguro -Dversion=2.5.2 -Dpackaging=jar

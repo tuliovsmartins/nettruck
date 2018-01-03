@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" xml:lang="pt-BR" dir="ltr">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="description" content="..."/>
+		<meta name="keywords" content="..."/>
+		<meta name="author" content="..."/>
+		<title>NetTruck - Classificados</title>
+		<link rel="stylesheet" th:href="@{/css/bootstrap.css}" type="text/css" />
+		<link rel="stylesheet" th:href="@{/css/nettruck.css}" type="text/css" />
+		<link rel="stylesheet" th:href="@{/css/animate.min.css}" type="text/css" />
+		<link rel="stylesheet" th:href="@{/css/style.css}" type="text/css" />
+		<link rel="stylesheet" th:href="@{/css/base.css}" type="text/css" />
+		<link rel="stylesheet" th:href="@{/css/flaticon/flaticon.css}" type="text/css"/>
+		<link rel="stylesheet" th:href="@{/css/colorbox.css}" type="text/css"/>
+	</head>
+	<body>
+		<div class="container wrapper">
+			<th:block th:replace="/fragments/default/top :: top"/>
+			<div class="row content">
+			<!-- BUSCA -->
+			<th:block th:replace="/user/fragments/userinfo :: userinfo"/>
+			
+			<div class="row content">
+			 	 <!-- Topo da menu -->
+    			  <th:block th:replace="/user/fragments/menu :: menu"/>
+      			<!-- Fim do Topo da pagina -->
+      			
+      			<th:block th:replace="/user/fragments/conta :: conta"/>
+      			 
+		</div>
+			<!-- footer -->
+			<th:block th:replace="/fragments/default/footer :: footer"/>
+		</div>
+	</div>
+
+		<!-- JavaScript -->
+		<script th:src="@{/js/jquery-1.11.3.min.js}"></script>
+		<script th:src="@{/js/bootstrap.min.js}"></script>
+		<script th:src="@{/js/jquery.slides.min.js}"></script>
+		<script th:src="@{/js/pagseguro.directpayment-sandbox.js}"></script>
+		<script th:src="@{/js/checkout.js}"></script>
+		<script th:src="@{/js/helpers.js}"></script>
+		<script th:src="@{/js/nettruck.js}"></script>
+		<script th:src="@{/js/wow.min.js}"></script>
+		<script th:src="@{/js/jquery.colorbox-min.js}"></script>
+		
+	</body>
+	<script>
+		$(document).on("click", ".open-AddBookDialog", function () {
+			var name =  $(this).attr('name');
+			alert(name)
+		     var myValue = $("#valor"+name).val();
+		     var myDescription = $("#description"+name).val();
+		     alert(myValue);
+		     $(".modal-body #itemAmount").val( myValue );
+		     $(".modal-body #myValor").text( myValue );
+		     $(".modal-body #myDescricao").text( myDescription );
+		});
+	</script>
+</html>

@@ -9,7 +9,7 @@ public class PlanosDataVM {
 	private String valor;
 	private long quantidade;
 	private String prazo;
-	private String descrição;
+	private String descricao;
 	private boolean promocional;
 	private Date dataFimPromocao;
 	private Date dataCadastro;
@@ -44,11 +44,11 @@ public class PlanosDataVM {
 	public void setPrazo(String prazo) {
 		this.prazo = prazo;
 	}
-	public String getDescrição() {
-		return descrição;
+	public String getDescricao() {
+		return descricao;
 	}
-	public void setDescrição(String descrição) {
-		this.descrição = descrição;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 	public boolean isPromocional() {
 		return promocional;

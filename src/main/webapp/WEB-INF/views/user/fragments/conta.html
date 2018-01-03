@@ -1,0 +1,172 @@
+<th:block th:fragment="conta">
+	<section id="pricing" class="pricing">
+		<div class="container">
+			
+	            <div class="col-lg-3 wow zoomIn" th:each="planos, index : ${planos}">
+	                <ul class="pricing-plan list-unstyled selected">
+	                    <li class="pricing-title">
+	                        <span th:text="${planos.nome}"></span>
+	                    </li>
+	                    <li class="pricing-desc">
+	                        <span th:text="${planos.descricao}"></span>
+	                    </li>
+	                    <li class="pricing-price">
+	                        <span th:text="'R$ ' + ${planos.valor}"></span>
+	                    </li>
+	                    <li th:if="${planos.promocional}" class="pricing-price">
+	                        <strong>Promocional</strong>
+	                    </li>
+	                    <li>
+	                        <a class="open-AddBookDialog btn btn-primary btn-xs" th:name="${planos.nome}" data-toggle="modal" data-target="#myModal" href="#">Comprar</a>
+	                    </li>
+	                </ul>
+	                	<input type="hidden" th:name="'valor' + ${planos.nome}" id="valor" th:value="${planos.valor}"/>
+						<input type="hidden" th:name="'description' +  ${planos.nome}" id="description" th:value="${planos.descricao}"/>
+						<p></p>
+	            </div>
+
+		</div>
+	</section>
+	
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog modal-lg">
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Pagamento</h4>
+	      </div>
+	      <div class="modal-body">
+	      
+	     <div class="container">
+	      <div class="row"> 
+	      
+	      <div class="col-xs-3">
+		      <h4>Escolha a forma de pagamento</h4>
+				<ul class="payment-methods">
+				  <li class="payment-method paypal">
+				    <input name="changePaymentMethod" id="creditCardRadio" value="creditCard" type="radio"/>
+				    <label for="creditCardRadio">Cartão de crédito</label>
+				  </li>
+				  <li class="payment-method pagseguro">
+				    <input name="changePaymentMethod" id="eftRadio" value="eft" type="radio"/>
+				    <label for="eftRadio">Cartão de débito</label>
+				  </li>
+				  <li class="payment-method bankslip">
+				    <input name="changePaymentMethod" id="boletoRadio" value="boleto" type="radio"/>
+				    <label for="boletoRadio">Boleto bancário</label>
+				  </li>
+				</ul>
+				 Valor da compra: R$<label id="myValor" name="myValor"></label><br/>
+				 <span id="myDescricao" name="myDescricao"></span>
+	      </div>
+	     
+	      <div class="col-xs-8">
+	      <div id="cartData">
+				<div class="cartItemFields">
+					<div class="field">
+						<input type="hidden" class="itemId" name="itemId" value="0001" />
+					</div>
+					<div class="field">
+						<input type="hidden" class="itemDescription" name="itemDescription" value="aquisição de creditos" />
+					</div>
+					<div class="field">
+						<input type="hidden" class="itemQuantity" name="itemQuantity" value="1" />
+					</div>
+					<div class="field">
+						<input type="hidden" name="itemAmount" id="itemAmount" />
+					</div>
+					<div id="eftData" class="paymentMethodGroup" dataMethod="eft">
+						<div class="field">
+							<h4>Escolha o banco do cartão </h4>
+						</div>
+						<ul>
+							<li dataBank="bancodobrasil" class="bank-flag bancodobrasil">Banco do Brasil</li>
+							<li dataBank="bradesco" class="bank-flag bradesco">Bradesco</li>
+							<li dataBank="itau" class="bank-flag itau">Itau</li>
+							<li dataBank="banrisul" class="bank-flag banrisul">Banrisul</li>
+							<li dataBank="hsbc" class="bank-flag hsbc">HSBC</li>
+						</ul>
+					</div>
+					<div id="boletoData" class="paymentMethodGroup" dataMethod="boleto">
+						<div class="field">
+							<h4>Clique para gerar o boleto</h4>
+							<input type="button" class="btn btn-success" id="boletoButton" value="Gerar Boleto"/>
+						</div>
+					</div>
+				</div>
+			</div>
+	      
+	      
+	      
+		<div id="creditCardData" class="paymentMethodGroup" dataMethod="creditCard">
+			<div id="cardData">
+				<h4>Dados do Titular do Cart&atilde;o</h4>
+				<div class="form-group">
+					<div class="input-group col-sm-6">
+						<input type="text" class="form-control" name="creditCardHolderName" id="creditCardHolderName" holderField="name" placeholder="Nome como está impresso no cartão"></input>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group col-sm-6">
+						<input type="text" class="form-control cardDatainput cardBrand" name="cardNumber" id="cardNumber" placeholder="Número do cartão"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="form-inline">
+						<div class="input-group col-sm-3">
+							<input type="text" class="form-control cardDatainput month" name="cardExpirationMonth" id="cardExpirationMonth"  placeholder="Mês de vencimento" maxlength="2" />
+						</div>
+						/
+						<div class="input-group col-sm-3">
+							<input type="text" class="form-control cardDatainput year" name="cardExpirationYear"  id="cardExpirationYear"  placeholder="Ano de vencimento" maxlength="4" />
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group col-sm-4">
+						<input type="text" class="form-control cardDatainput" name="cardCvv" id="cardCvv" maxlength="5"  placeholder="Código de segurança (cvv)"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="holderData" class="paymentMethodGroup" dataMethod="creditCard">
+			<div id="ownerData">
+				<div class="form-group">
+					<div class="form-inline">
+						<div class="input-group col-sm-4">
+							<input type="text" class="form-control" name="creditCardHolderBirthDate" id="creditCardHolderBirthDate" maxlength="10" data-mask="99/99/9999" placeholder="Data de Nascimento (99/99/9999)" />
+						</div>
+						<div class="input-group col-sm-4">
+							<input type="text" class="form-control" name="creditCardHolderCPF" id="creditCardHolderCPF" holderField="cpf" maxlength="11" data-mask="999.999.999-99" placeholder="CPF (somente n&uacute;meros)" />
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="form-inline">
+						<div class="input-group col-sm-2">
+							<input type="text" name="creditCardHolderAreaCode" id="creditCardHolderAreaCode" holderField="areaCode" class="form-control areaCode" maxlength="2" placeholder="DDD"/>
+						</div>
+						<div class="input-group col-sm-5">
+							<input type="text" name="creditCardHolderPhone" id="creditCardHolderPhone" holderField="phone" class="form-control phone" maxlength="10" placeholder="Telefone"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="hidden" name="creditCardToken" id="creditCardToken"  />
+				<input type="hidden" name="creditCardBrand" id="creditCardBrand"  />
+				<input type="button" class="btn btn-success" id="creditCardPaymentButton" value="Adiquirir créditos"></input>
+			</div>
+		</div>
+	</div>
+</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+	      </div>
+	    </div>
+	</div>
+	  </div>
+	</div>
+</th:block>

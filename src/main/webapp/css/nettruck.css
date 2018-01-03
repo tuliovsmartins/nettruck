@@ -11519,7 +11519,7 @@ body {
     position: absolute;
     top: 0;
     left: 20px;
-    z-index: 9999
+    z-index: 999
 }
 
 .breadcrumb {
@@ -11778,3 +11778,14 @@ body {
         margin: 20px 0 0
     }
 }
+
+.cardBrand{
+	background:no-repeat right 5px;
+}
+
+.cardBrand[brand='visa']{ background-image:url('../img/cards/visa.png'); }
+.cardBrand[brand='mastercard']{ background-image:url('../img/cards/mastercard.png'); }
+.cardBrand[brand='amex']{ background-image:url('../img/cards/amex.png'); }
+.cardBrand[brand='diners']{ background-image:url('../img/cards/diners.png'); }
+.cardBrand[brand='aura']{ background-image:url('../img/cards/aura.png'); }
+

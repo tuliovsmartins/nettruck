@@ -17,7 +17,7 @@ public class PlanosConverter {
 		planos.setId(planosDataVM.getId());
 		planos.setNome(planosDataVM.getNome());
 		planos.setValor(planosDataVM.getValor());
-		planos.setDescrição(planosDataVM.getDescrição());
+		planos.setDescricao(planosDataVM.getDescricao());
 		planos.setPrazo(planosDataVM.getPrazo());
 		planos.setPromocional(planosDataVM.isPromocional());
 		planos.setQuantidade(planosDataVM.getQuantidade());
@@ -34,7 +34,7 @@ public class PlanosConverter {
 		planosDataVM.setId(planos.getId());
 		planosDataVM.setNome(planos.getNome());
 		planosDataVM.setValor(planos.getValor());
-		planosDataVM.setDescrição(planos.getDescrição());
+		planosDataVM.setDescricao(planos.getDescricao());
 		planosDataVM.setPrazo(planos.getPrazo());
 		planosDataVM.setPromocional(planos.isPromocional());
 		planosDataVM.setQuantidade(planos.getQuantidade());
